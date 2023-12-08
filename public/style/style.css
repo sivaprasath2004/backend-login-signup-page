@@ -1,0 +1,315 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+#heading{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  color: whitesmoke;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#content{
+  display: grid;
+  gap: 30px;
+}
+#home_page{
+  display: grid;
+  grid-template-columns: .5fr 3fr;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./img/Coding\ workshop-amico.png');
+  background-size:75%;
+  background-position: calc(50% - 0px) calc(0% - 0px); 
+  background-repeat: no-repeat;
+}
+#additional-content{
+  display: grid;
+      place-items: center;
+      grid-template-columns: 1fr;
+      top: 40%;
+      width: 95%;
+      position: absolute;
+      gap: 50px;
+      left: 3%;
+      backdrop-filter: blur(3px);
+      z-index: 5;
+}
+#head{
+  font-size: 2.4rem;
+  text-shadow: -5px -1px 0px rgba(36, 79, 69, 0.55);
+}
+#addition{
+  display: flex;
+ flex-direction: row;
+ gap: 10px;
+}
+#contact_address{
+  height: 50px;
+  text-decoration: none;
+  background-color: black;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 2fr 1fr;
+  color: whitesmoke;
+  font-weight: 900;
+  width: 170px;
+  border-radius: 15px;
+}
+#next_icon{
+  width: 30px;
+}
+#heading_tag{
+  color: black;
+  text-shadow: 5px 3px 0px rgba(69, 128, 122, 1);
+  font-weight: 800;
+  font-size: 2.3rem;
+}
+#heading_tag:hover{
+  content: 'examle';
+  color: whitesmoke;
+}
+#background_setup{
+  width: 500px;
+}
+.a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+section,main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+}
+
+#loginBox{
+  position: relative;
+  width: 400px;
+  height: 490px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
+h2{
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+.input-box{
+  position: relative;
+  width: 310px;
+  margin: 30px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: -5px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+
+.remember-forget{
+  margin: -15px 0 15px;
+  font-size: .9em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forget label input{
+  margin: right 3px;
+}
+.errorMessage{
+  color: red;
+  padding-bottom: 10px;
+}
+.remember-forget a{
+  color: #fff;
+  text-decoration: none;
+}
+img{width: 30px;}
+.remember-forget a:hover{
+  text-decoration: underline;
+}
+#user{
+  color: rgb(251, 255, 0);
+}
+button{
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  font-weight: 500;
+}
+#errors{display: flex;flex-direction: row;gap: 10px;}
+#errors img{width: 20px;height: 20px;}
+.register-link{
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover{
+  text-decoration: underline;
+}
+#next_icon{
+  width: 25px;
+  animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate {
+0%{
+  width: 35px;
+  padding-right: 20px;
+}
+100%{
+  width: 45px;
+  transform: translateX(-10px);
+  padding-left: 15px;
+}
+}
+@media (max-width:440px){
+  #loginBox{
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+    backdrop-filter: none;
+  }
+  .input-box{
+    width: 290px;
+  }
+  #home_page{
+    width: 100%;
+    display: flex;
+    background-image: url('./img/Coding\ workshop-amico.png');
+    flex-direction: column-reverse;
+    gap: 50px;
+    background-size:150%;
+  background-position: calc(50% - 0px) calc(50% - 0px); 
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    position: fixed;
+    }
+    #heading{
+      position:absolute;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      right: 0%;
+      position: fixed;
+    }
+    #addition{
+      display: flex;
+      flex-direction: column;
+    }
+    #additional-content{
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr;
+      top: 40%;
+      width: 95%;
+      position: absolute;
+      left: 3%;
+      backdrop-filter: blur(2px);
+      z-index: 5;
+    }
+    #background_setup{
+      display: none;
+    }
+    #next_icon{
+      width: 25px;
+      animation: animate 2s ease-in-out infinite;
+    }
+  @keyframes animate {
+    0%{
+      width: 35px;
+      padding-right: 20px;
+    }
+    100%{
+      width: 45px;
+      padding-left: 15px;
+    }
+  }
+  #heading_tag{
+    font-size: 1.8rem;
+  }
+  .a{
+    font-size: 1rem;
+    color: #fff;
+  }
+  #contact_address{
+    font-size: 1.5rem;
+    font-weight: 900;
+    box-shadow: 0 12px 12px rgba(0, 0, 240, .5);
+  }
+  #addition{
+    display: grid;
+    place-items: center;
+  }
+  #contact_address{
+    width: 200px;
+  }
+}

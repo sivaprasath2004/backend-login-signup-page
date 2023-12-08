@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{docTitle}}</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<main>
+    <div id="loginBox">
+      <form action="/login" method="post">
+        <h2>Login</h2>
+        <div class="input-box">
+          <input type="email" required name="email" value={{email}}>
+          <label> Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><img src="style/img/eye.png" alt="image" id="handleclick"/></span>
+          <input type='password' required id="password" name="password" value={{password}}>
+          <label> Password</label>
+        </div>
+        <div class="remember-forget">
+          <label>
+            <input type="checkbox">Remember Me
+          </label>
+          <a href='/signup'>Forget Password</a>
+        </div>
+        <div id="errors">
+        {{#if messages}}
+         <img src="style/img/alert.png">
+        <p class="errorMessage">{{messages}}</p>
+        {{/if}}</div>
+        <button type="Submit">Login</button>
+        <div class="register-link">
+          <p id="account">Don't have an account?
+            <a href="/signup">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+</main>
+<script>
+  let password=document.getElementById('password')
+   let image=document.getElementById('handleclick')
+   let hideimage='style/img/hide.png'
+   let eyeimage='style/img/eye.png'
+   image.addEventListener('click',function(){
+    if(password.type==='password'){password.type='text'
+    image.setAttribute('src',hideimage)}
+    else{password.type='password'
+    image.setAttribute('src',eyeimage)}
+   })
+</script>
+</html>

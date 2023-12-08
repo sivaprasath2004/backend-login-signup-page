@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{docTitle}}</title>
+</head>
+  <section>
+    <div id="loginBox">
+      <form action="/signup" method="post">
+        <h2>SignUp</h2>
+        <div class="input-box">
+          <input type="text" required name="name" value={{name}}>
+          <label> User name</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon> </span>
+          <input type="email" required name="email" value={{email}}>
+          <label> Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><img src="style/img/eye.png" alt="image" id="handlePasswordClick"/></span>
+          <input type="password" required name="password" id="enterpassword" value={{password}}>
+          <label>Enter Password</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><img src="style/img/eye.png" alt="image" id="handleRePasswordClick"/></span>
+            <input type="password" required name="repassword" id="repassword" value={{repassword}}>
+            <label>Re-Password</label>
+          </div>
+          <div id="errors">
+        {{#if messages}}
+         <img src="style/img/alert.png">
+        <p class="errorMessage">{{messages}}</p>
+        {{/if}}</div>
+        <button type="Submit">SignUp</button>
+      </form>
+    </div>
+  </section>
+  <script>
+  let password=document.getElementById('enterpassword')
+  let repassword=document.getElementById('repassword')
+   let image=document.getElementById('handlePasswordClick')
+   let secondImage=document.getElementById('handleRePasswordClick')
+   let hideimage='style/img/hide.png'
+   let eyeimage='style/img/eye.png'
+   image.addEventListener('click',function(){
+    if(password.type==='password'){password.type='text'
+    image.setAttribute('src',hideimage)}
+    else{password.type='password'
+    image.setAttribute('src',eyeimage)}
+   })
+   secondImage.addEventListener('click',function(){
+    if(repassword.type==='password'){
+      repassword.type='text'
+      secondImage.setAttribute('src',hideimage)}
+    else{
+      repassword.type='password'
+      secondImage.setAttribute('src',eyeimage)}
+   })
+</script>
+</html>
