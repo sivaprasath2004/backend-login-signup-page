@@ -1,10 +1,8 @@
- const express=require('express')
+const express=require('express')
 const app=express()
-const cors=require('cors')
 const path = require('path');
 const { engine } = require('express-handlebars')
 app.use(express.static(path.join(__dirname,'public')))
-app.use(cors())
 app.engine('hbs',engine({ extname: '.hbs', defaultLayout: false }))
 app.set('view engine', 'hbs')
 const login=require('./controller/loginControl')
